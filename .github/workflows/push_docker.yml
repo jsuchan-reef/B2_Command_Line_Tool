@@ -50,5 +50,6 @@ jobs:
           context: .
           push: true
           tags: backblazeit/b2:latest,backblazeit/b2:${{ steps.package_version.outputs.package_version }}
-          platforms: linux/amd64
-
+          platforms:
+            - linux/amd64
+            - linux/arm64
