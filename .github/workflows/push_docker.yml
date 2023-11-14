@@ -8,7 +8,6 @@ jobs:
   deploy-docker:
     runs-on: ubuntu-latest
     env:
-      DEBIAN_FRONTEND: noninteractive
       DOCKERHUB_USERNAME: secrets.DOCKERHUB_USERNAME
       DOCKERHUB_TOKEN: secrets.DOCKERHUB_TOKEN
       PYTHON_DEFAULT_VERSION: 3.11
@@ -47,7 +46,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: backblazeit/b2:latest,backblazeit/b2:${{ steps.package_version.outputs.package_version }}
+          tags: yedpodtrzitko/b2:latest,yedpodtrzitko/b2:${{ steps.package_version.outputs.package_version }}
           platforms:
             - linux/amd64
             - linux/arm64
