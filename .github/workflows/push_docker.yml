@@ -47,6 +47,4 @@ jobs:
           context: .
           push: true
           tags: yedpodtrzitko/b2:latest,yedpodtrzitko/b2:${{ steps.package_version.outputs.package_version }}
-          platforms:
-            - linux/amd64
-            - linux/arm64
+          platforms: linux/amd64,linux/arm64
